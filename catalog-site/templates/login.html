@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Вход в поддиректорию</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Вход в защищённую поддиректорию: {{ rel_path }}</h1>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    <form method="POST">
+        <label>Логин: <input type="text" name="username"></label><br>
+        <label>Пароль: <input type="password" name="password"></label><br>
+        <input type="submit" value="Войти">
+    </form>
+    <a href="{{ url_for('catalog') }}">Назад в корень</a>
+</body>
+</html>

@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;  /* Светло-зелёный фон страницы */
+    color: #ffffff;  /* Тёмно-синий цвет текста */
+    padding: 20px;
+}
+
+h1 {
+    color: #ffffff;  /* Тёмно-синий для заголовков (можно сделать другим, например #006400 для тёмно-зелёного) */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #000000;  /* Светло-голубой фон для элементов списка */
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ffffff;  /* Можно изменить цвет рамки на #228b22 (зелёный) */
+    border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;  /* Красный цвет ссылок */
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ffffff;  /* Оранжевый при наведении */
+}
+
+form {
+    background: #000000;  /* Светло-голубой фон формы (как у li) */
+    padding: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    width: 300px;
+}
+
+li a {
+    font-weight: bold;
+}

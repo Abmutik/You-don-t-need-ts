@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Каталог файлов</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Каталог: /{{ current_path }}</h1>
+    <ul>
+        {% if current_path %}
+            <li><a href="{{ url_for('catalog', rel_path=os.path.dirname(current_path)) }}">.. (Вверх)</a></li>
+        {% endif %}
+        {% for item in items %}
+            <li>
+                {% if item.is_dir %}
+                    📁 <a href="{{ item.url }}">{{ item.name }}/</a>
+                {% else %}
+                    📄 <a href="{{ item.url }}" download="{{ item.name }}">{{ item.name }}</a>  <!-- Добавлен download -->
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('logout') }}">Выйти</a>
+</body>
+</html>

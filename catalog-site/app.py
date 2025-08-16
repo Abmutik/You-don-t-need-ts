@@ -4,7 +4,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 import os
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'  # Замени на случайный ключ
+app.secret_key = 'ba71613e778ebe5ddaaa927c314a17a1'  # Замени на случайный ключ
 
 # Основные пользователи (для входа на сайт)
 users = {
@@ -131,3 +131,4 @@ def index():
 
 if __name__ == '__main__':
     app.run(debug=False, host='0.0.0.0', port=5000)
+
